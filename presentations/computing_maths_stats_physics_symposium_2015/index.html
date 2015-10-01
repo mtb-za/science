@@ -41,11 +41,14 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>The Earth is See-Through</h1>
+					<h2>The Earth is See-Through</h2>
 					<h3>(If you use the right tools)</h3>
 					<h4>A Brief discussion about a geophysical survey in the Karoo</h4>
 					<p>
-						<small>Created by <a href="http://github.com/mtb-za">Martin Bentley</a> / <a href="http://twitter.com/astonsplat">@astonsplat</a></small>
+						<small>
+							Created by <a href="http://github.com/mtb-za">Martin Bentley</a> / <a href="http://twitter.com/astonsplat">@astonsplat</a><br/>
+							s214382818@nmmu.ac.za
+						</small>
 					</p>
 					<p>
 						<small>2 October 2015</small>
@@ -79,10 +82,10 @@
 						<p>Looking at part of the Karoo</p>
 					</section>
 					<section>
-						<img src="./img/karoo.png" height="100%"></img>
+						<img src="./img/shale_gas_may_update_small.jpg" ></img>
 					</section>
 					<section>
-						<img src="./img/karoo_rad.png" height="100%"></img>
+						<img src="./img/geology_mag_link.jpg"></img>
 					</section>
 				</section>
 
@@ -102,30 +105,42 @@
 						<span class="fragment"><p>Just a little bit of a taste....</p></span>
 					</section>
 					<section>
+						<h4>Geophysical Processing</h4>
+						<ol>
+							<li class="fragment">Acquisition</li>
+							<li class="fragment">Processing
+								<figure class="fragment">
+									<img src="./img/processing_process.png"/>
+								</figure>
+							</li>
+							<li class="fragment">Interpretation/Modelling</li>
+							<li class="fragment">Ground Truthing</li>
+					</section>
+					<section>
 						<h3>Tilt Angle</h3>
 							<figure>
-								<img src="img/tilt_defined.png" alt="Definition of the Tilt Angle" /><figcaption>The tilt angle normalises the vertical derivative by balancing it with the horizontal derivatives and then constraining the output range.</figcaption>
+								<img src="img/tilt_defined.png"/><figcaption>The tilt angle normalises the vertical derivative by balancing it with the horizontal derivatives and then constraining the output range.</figcaption>
 							</figure>
 					</section>
 					<section>
 						<figure>
-							<img src="img/karoo_mag_div.png" alt="Edge detection using the Tilt Angle." /><figcaption>The SANABOZI magnetic data available over part of the Eastern Cape.</figcaption>
+							<img src="img/karoo_mag_div.jpg"/><figcaption>The SANABOZI magnetic data available over part of the Eastern Cape.</figcaption>
 						</figure>
 					</section>
 					<section>
 						<figure>
-							<img src="img/karoo_mag_tilt.png" alt="Edge detection using the Tilt Angle." /><figcaption>The same dataset, filtered.</figcaption>
+							<img src="img/karoo_mag_tilt2.jpg"/><figcaption>The same dataset, filtered.</figcaption>
 						</figure>
 					</section>
 					<section>
 						<figure>
-							<img src="img/coega_mag.png" alt="Edge detection using the Tilt Angle." /><figcaption>Magnetic data for the area around PE.</figcaption>
+							<img src="img/coega_mag.png"/><figcaption>Magnetic data for the area around PE.</figcaption>
 						</figure>
 					</section>
 
 					<section>
 						<figure>
-							<img src="img/coega_mag_tilt.png" alt="Edge detection using the Tilt Angle." /><figcaption>The Coega Fault is clearly visible in the tilt-filtered image.</figcaption>
+							<img src="img/coega_mag_tilt.png"/><figcaption>The Coega Fault is clearly visible in the tilt-filtered image.</figcaption>
 						</figure>
 					</section>
 				</section>
@@ -137,9 +152,6 @@
 					<p class="fragment">Link detected structures to groundwater aquifers</p>
 					<p class="fragment">Understanding of deeper structure of Karoo intrusions</p>
 					<p class="fragment">Link to other datasets (seismic, elevation, &c)</p>
-				</section>
-
-				<section>
 				</section>
 
 			</div>
@@ -158,8 +170,9 @@
 				progress: true,
 				history: true,
 				center: true,
+				slideNumber: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
 
 				// Optional reveal.js plugins
 				dependencies: [
