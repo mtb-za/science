@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Rage Against the Rainbow</title>
+
+		<meta name="description" content="Presentation about the basics of magnetic processing">
+		<meta name="author" content="Martin Bentley">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Rage Against the Rainbow</h2>
+					<p>A Brief discussion about why the default colourmap<span class="fragment"> usually </span>sucks</p>
+					<p>
+						<small>
+							<a href="http://github.com/mtb-za">Martin Bentley</a> / <a href="http://twitter.com/astonsplat">@astonsplat</a><br/>
+							s214382818@nmmu.ac.za
+						</small>
+					</p>
+					<p>
+						<small>16 September 2016</small><br/>
+						<small>Supervisors: Dr M. Doucouré | Dr L. Cowley</small><br/>
+						<small>Dept. of Computing Science | Dept. of Earth Sciences</small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Basic colour theory</h2>
+						<h3 class="fragment">In less than a minute</h3>
+					</section>
+					<section>
+						<h3>Common colour spaces include:</h3>
+						<ul>
+							<li>RGB</li>
+							<li>CMYK</li>
+							<li>Munsell</li>
+							<li>Pantone</li>
+							<li class="fragment highlight-red">CIELAB</li>
+						</ul>
+					</section>
+					<section>
+						<img src="./img/munsell.svg"></img>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Types of data</h3>
+						<span class="fragment fade-in">Sequential<br/></span>
+						<span class="fragment fade-in">Diverging<br/></span>
+						<span class="fragment fade-in">Categorical</span>
+					</section>
+					<section data-transition="fade-out">
+						<h3>Sequential Data</h3>
+						Increases from low to high</br>
+						<ul>
+							<li class="fragment">Intensity of light</li>
+							<li class="fragment">Time-linked</li>
+						</ul>
+						<img class="stretch" src="./img/small_seq.png"></img>
+					</section>
+					<section data-transition="fade-in">
+						<h3>Sequential Data</h3>
+						Increases from low to high</br>
+						<ul>
+							<li>Intensity of light</li>
+							<li>Time-linked</li>
+						</ul>
+						<img class="stretch" src="./img/small_linear.png"></img>
+					</section>
+					<section>
+						<h3>Diverging Data</h3>
+						Has a given midpoint and increases and decreases away from that point</br>
+						<ul>
+							<li class="fragment">Stock prices</li>
+							<li class="fragment">Elevation and bathymetry</li>
+						</ul>
+						<img class="stretch" src="./img/small_div.png"></img>
+					</section>
+					<section>
+						<h3>Categorical Data</h3>
+						No particular numerical association</br>
+						<ul>
+							<li class="fragment">Demographic category</li>
+							<li class="fragment">Type of industry</li>
+						</ul>
+						<img class="stretch" src="./img/small_qual.png"></img>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Why the rainbow sucks</h2>
+						<h3 class="fragment">Not linear lightness</h3>
+					</section>
+					<section data-background-image="./img/jet_bg.png">
+						<img class="stretch" src="./img/jet1.png"></img>
+					</section>
+					<section data-background-image="./img/parula_bg.png">
+						<img class="stretch" src="./img/parula1.png"></img>
+					</section>
+					<section data-background-image="./img/viridis_bg.png">
+						<img class="stretch" src="./img/viridis1.png"></img>
+					</section>
+					<section>
+						<img class="stretch" src="./img/cm_comp.png"></img>
+					</section>
+					<section>
+						<img class="stretch" src="./img/pmri.png"></img>
+						<img class="stretch" src="./img/pjetnoise.png"></img>
+					</section>
+					<section>
+						<img class="stretch" src="./img/pchesapeake.png"></img>
+						<img class="stretch" src="./img/pmagfield.png"></img>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Colour-blindness and greyscale</h3>
+						<p>Different types</p>
+						<ul>
+							<li class="fragment">Protanomaly/Protanopia</li>
+							<li class="fragment">Deuteranomaly/Deuteranopia</li>
+						</ul>
+					</section>
+					<section data-transition="fade-out">
+						<img class="stretch" src="./img/seq.png"></img>
+					</section>
+					<section data-transition="fade">
+						<img class="stretch" src="./img/seq_deuteranopia.png"></img>
+					</section>
+					<section data-transition="fade-out">
+						<img class="stretch" src="./img/div.png"></img>
+					</section>
+					<section data-transition="fade">
+						<img class="stretch" src="./img/div_deuteranopia.png"></img>
+					</section>
+				</section>
+
+				<section>
+					<h4>Resources</h4>
+					<ul>
+						<li class="fragment">http://colorbrewer2.org/<span class="fragment"> Good way to choose colourmaps</span></li>
+						<li class="fragment">http://vrl.cs.brown.edu/color<span class="fragment"> Choose colourmaps of certain colours</span></li>
+						<li class="fragment">http://colororacle.org/<span class="fragment"> Check for colourblind safety</span></li>
+					</ul>
+					<h4 class="fragment">References</h4>
+						<small>
+							<ul>
+								<li class="fragment">Borland, D., Taylor II, R.M., 2007. Rainbow color map (still) considered harmful. IEEE Computer Graphics and Applications 27, 14–17.</li>
+								<li class="fragment">Niccoli, M., 2012. The rainbow is dead...long live the rainbow! [WWW Document]. MyCarta. URL http://mycarta.wordpress.com/2012/05/29/the-rainbow-is-dead-long-live-the-rainbow-series-outline/ (accessed 9.15.14).</li>
+								<li class="fragment">Simmon, R., 2014a. Subtleties of Color 1/6 [WWW Document]. URL http://earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-color-part-1-of-6/ (accessed 8.4.14).</li>
+							</ul>
+					</small>
+				</section>
+
+				<section data-background-video="./img/galaxies.mp4" data-background-video-loop data-background-video-muted>
+				</section>
+				<section>
+					<h3>Thank you</h3>
+					<p>
+						<small>
+							<a href="http://github.com/mtb-za">Martin Bentley</a> / http://github.com/mtb-za / <a href="http://twitter.com/astonsplat">@astonsplat</a><br/>
+							s214382818@nmmu.ac.za
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>A last look at the colourmaps</h2>
+					</section>
+					<section data-background-image="./img/jet_bg.png">
+						<img class="stretch" src="./img/jet.png"></img>
+					</section>
+					<section data-background-image="./img/parula_bg.png">
+						<img class="stretch" src="./img/parula.png"></img>
+					</section>
+					<section data-background-image="./img/viridis_bg.png">
+						<img class="stretch" src="./img/viridis.png"></img>
+					</section>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
